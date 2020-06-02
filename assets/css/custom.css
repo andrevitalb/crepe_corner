@@ -1,0 +1,470 @@
+/*-----------------
+	  General
+-----------------*/
+
+a { transition: .2s all ease-in-out; }
+
+.reset-line-height { line-height: unset !important; }
+.text-uppercase { text-transform: uppercase; }
+
+.d-flex { display: flex; }
+.d-inline-block { display: inline-block; }
+
+.justify-content-center { justify-content: center; }
+header .midnightInner { overflow: hidden !important; }
+.bg-center-bottom { background-position: center 95%; }
+
+.yellow { transition: all .15s ease-in-out; }
+.yellow:hover { color: #FFC805; }
+
+.dark-bg-1 a:hover { color: #fff !important; }
+
+.btn-white-border {
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: transparent;
+	border: 2px solid #fff;
+	color: #fff;
+	transition: all .3s ease-in-out;
+}
+
+.btn-white-border:hover{
+	color: #F0282F;
+	background-color: #fff;
+}
+
+.radio, .radio * { cursor: pointer; }
+
+.radio input[type="radio"] {
+	opacity: 0;
+	z-index: 1;
+}
+
+.radio i {
+	position: relative;
+	padding-left: 5px;
+	display: initial;
+}
+
+.radio i::before {
+	width: 22px;
+	height: 22px;
+	top: -1px;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	margin-left: -20px;
+	border: 1.5px solid #A7A7A7;
+
+	border-radius: 50%;
+	background-color: transparent;
+	transition: border 0.15s ease-in-out;
+}
+
+.radio i::after {
+	padding-top: 0;
+	top: 2px;
+	width: 18px;
+	height: 18px;
+	margin-left: -20px;
+	display: inline-block;
+	position: absolute;
+	content: " ";
+	left: 3px;
+	border-radius: 50%;
+	background-color: #555555;
+	transform: scale(0, 0);
+	transition: transform 0.1s cubic-bezier(0.8, -0.33, 0.2, 1.33);
+}
+
+.radio input[type="radio"]:checked + i::before { border-color: #BD0047; border-color: #ffffff; }
+.radio input[type="radio"]:checked + i::after { 
+	background-color: #BD0047;
+	background-color: #ffffff;
+	transform: scale(1, 1);
+}
+fieldset {
+	padding-top: 40px;
+	margin-top: 40px;
+	background-color: rgba(0,0,0,.5);
+}
+legend {
+	color: #ffffff;
+	padding: 0 5px;
+	font-size: 18px;
+
+}
+@media(max-width: 576px){
+	main { margin-bottom: 0 !important; }
+	footer { position: initial !important; }
+}
+
+/*-------------------------
+		  Menú
+-------------------------*/
+
+.menuSection p { 
+	margin: 0; 
+	max-width: 70%;
+}
+
+.menuSection sub { font-style: italic; }
+.menuItemContainer { padding: 15px; }
+.menuItemName { margin-bottom: 10px; }
+
+.menuItemPrice { 
+	text-align: right;
+	width: 100%;
+	display: flex;
+	font-weight: 700;
+}
+
+.menuItemPrice p {
+	flex: 1;
+	border-bottom: 1px dotted black;
+	height: .6em;
+	margin-right: 10px;
+}
+
+/*-----------------
+	Sucursales
+-----------------*/
+
+/*------ Map -----*/
+
+#mainMapHolder > div { width: 100%; }
+
+#mainMap {
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+}
+
+#mainMap img { max-width: 40px; }
+
+.infoWindow {
+	padding: 1.2rem;
+	max-width: 200px;
+}
+
+.infoWindowTtl {
+	font-size: 22px;
+	line-height: 25px;
+	margin-bottom: 1rem;
+}
+
+.infoWindow p,
+.infoWindow a {
+	margin: 5px 0 !important;
+	font-family: Open Sans, sans-serif;
+	font-size: 15px;
+	line-height: 19px;
+}
+
+.infoWindow b { font-weight: 600; }
+
+.cluster img {
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
+}
+
+.cluster span {
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+	background-color: #BD0047;
+	border-radius: 50%;
+	display: block;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	margin-top: -10%;
+	left: 55%;
+}
+
+#mapText h2 {
+	font-size: 32px;
+	line-height: 35px;
+}
+
+@media(max-width: 991px){
+	#mapText { order: 1; }
+	#mainMapHolder { order: 2; }
+}
+
+/*-------------------------
+		Franquicias
+-------------------------*/
+
+/*--------- CTA ---------*/
+
+#franqCTA,
+#franqCTA .title-fill:after { background-color: #D8B5A4; }
+
+#franqCTA { border-radius:5px; }
+#franqCTA .title-fill:after { color: #fff; }
+
+#franqCTA h3 {
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom:20px;
+}
+
+#franqCTA .btn-black-border {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+/*--------- Form ---------*/
+
+.cForm p,
+.cForm label { 
+	color: #A7A7A7; 
+	display: inline-block;
+}
+
+.cForm label { transition: all .3s ease-in-out; letter-spacing: 2px; }
+.cForm label:hover { color: #fff; }
+
+.cForm p { margin: initial; }
+.cForm input[type="radio"] { width: auto; }
+
+.cForm textarea { min-height: 150px; }
+
+/**********File Inputs**********/
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.iborrainputfile {
+	font-size:16px; 
+	font-weight:normal;
+	font-family: 'Lato';
+}
+
+/* style 1 */
+
+.inputfile-1 + label {
+    color: #fff;
+    background-color: #ec9b1b;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+    background-color: #d47e03;
+}
+
+/* style 2 */
+
+.inputfile-2 + label {
+    color: #FFF;
+    border: 2px solid currentColor;
+}
+
+.inputfile-2:focus + label,
+.inputfile-2.has-focus + label,
+.inputfile-2 + label:hover {
+    color: #d47e03;
+}
+
+/* style 3 */
+
+.inputfile-3 + label {
+    color: #ccc;
+}
+
+.inputfile-3:focus + label,
+.inputfile-3.has-focus + label,
+.inputfile-3 + label:hover {
+    color: #ec9b1b;
+}
+
+/* style 4 */
+
+.inputfile-4 + label {
+    color: #ccc;
+}
+
+.inputfile-4:focus + label,
+.inputfile-4.has-focus + label,
+.inputfile-4 + label:hover {
+    color: #ec9b1b;
+}
+
+/* style 5 */
+
+.inputfile-5 + label {
+    color: #ec9b1b;
+}
+
+.inputfile-5:focus + label,
+.inputfile-5.has-focus + label,
+.inputfile-5 + label:hover {
+    color: #d47e03;
+}
+
+.inputfile-5 + label figure {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ec9b1b;
+    display: block;
+    padding: 20px;
+    margin: 0 auto 10px;
+}
+
+.inputfile-5:focus + label figure,
+.inputfile-5.has-focus + label figure,
+.inputfile-5 + label:hover figure {
+    background-color: #d47e03;
+}
+
+.inputfile-5 + label svg {
+    width: 100%;
+    height: 100%;
+    fill: #f1e5e6;
+}
+
+/* style 6 */
+
+.inputfile-6 + label {
+    color: #ec9b1b;
+}
+
+.inputfile-6:focus + label,
+.inputfile-6.has-focus + label,
+.inputfile-6 + label:hover {
+    color: #d47e03;
+}
+
+.inputfile-6 + label figure {
+    width: 100px;
+    height: 135px;
+    background-color: #ec9b1b;
+    display: block;
+    position: relative;
+    padding: 30px;
+    margin: 0 auto 10px;
+}
+
+.inputfile-6:focus + label figure,
+.inputfile-6.has-focus + label figure,
+.inputfile-6 + label:hover figure {
+    background-color: #d47e03;
+}
+
+.inputfile-6 + label figure::before,
+.inputfile-6 + label figure::after {
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.inputfile-6 + label figure::before {
+    border-top: 20px solid #05354e;
+    border-left: 20px solid transparent;
+}
+
+.inputfile-6 + label figure::after {
+    border-bottom: 20px solid #d47e03;
+    border-right: 20px solid transparent;
+}
+
+.inputfile-6:focus + label figure::after,
+.inputfile-6.has-focus + label figure::after,
+.inputfile-6 + label:hover figure::after {
+    border-bottom-color: #ec9b1b;
+}
+
+.inputfile-6 + label svg {
+    width: 100%;
+    height: 100%;
+    fill: #f1e5e6;
+}
+
+/* style 7 */
+
+.inputfile-7 + label {
+    color: #ec9b1b;
+}
+
+.inputfile-7 + label {
+    border: 1px solid #ec9b1b;
+    background-color: #fff;
+    padding: 0;
+}
+
+.inputfile-7:focus + label,
+.inputfile-7.has-focus + label,
+.inputfile-7 + label:hover {
+    border-color: #d47e03;
+}
+
+.inputfile-7 + label span,
+.inputfile-7 + label strong {
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile-7 + label span {
+    width: 200px;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.inputfile-7 + label strong {
+    height: 100%;
+    color: #fff;
+    background-color: #ec9b1b;
+    display: inline-block;
+}
+
+.inputfile-7:focus + label strong,
+.inputfile-7.has-focus + label strong,
+.inputfile-7 + label:hover strong {
+    background-color: #d47e03;
+}
+
+@media screen and (max-width: 50em) {
+	.inputfile-7 + label strong {
+		display: block;
+	}
+}
+/**********End File Inputs**********/
