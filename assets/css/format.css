@@ -48,8 +48,8 @@
 	margin-right: 5px;
 }
 
-
 .margin-40-left { margin-left: 40px; }
+
 
 .padding-40 { padding: 40px; }
 .padding-20 { padding: 20px; }
@@ -66,6 +66,7 @@
 }
 
 @media(min-width: 1024px){
+	.lg-margin-40-left { margin-left: 40px !important; }
 	.lg-padding-60 { padding: 60px; }
 	.lg-padding-120-tb {
 		padding-top: 120px;
@@ -88,6 +89,8 @@
 
 @media(max-width: 576px){
 	.sm-text-center { text-align: center; }
+
+	.sm-margin-auto { margin: auto; }
 
 	.sm-padding-60-top { padding-top: 60px; }
 

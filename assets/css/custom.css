@@ -41,29 +41,27 @@ header .midnightInner { overflow: hidden !important; }
 	z-index: 1;
 	display: none;
 }
-
-.radio {
+.radio span {
 	background-color: #9F7763;
 	padding: 10px 17.5px;
 	border-radius: 10px;
 	text-align: center;
 	display: inline-block;
-	transition: all .25s ease-in-out;
+	transition: all .25s ease-in;
+	cursor: pointer;
 }
 
-.radio:hover { 
+.radio span:hover { 
 	background-color: #5B2509;
 	transform: translateY(-7.5px);
 }
 
-.radio p {
-	margin: 0;
-	padding: 0;
-}
+input[type="radio"]:checked + span { background-color: #5B2509; }
 
 @media(max-width: 576px){
 	main { margin-bottom: 0 !important; }
 	footer { position: initial !important; }
+	.radio span:hover {  transform: translateY(0); }
 }
 
 /*-------------------------
@@ -215,10 +213,15 @@ legend {
 
 /*--------- Form Carousel ----------*/
 
-#form-slider, #form-slider * { color: #ddd; }
+#form-slider, #form-slider * { 
+	color: #ddd; 
+	letter-spacing: 0 !important;
+}
+
 .fSlidesWrapper { padding: 0 2.2rem; }
-.formSlides {  display: block !important;  }
+.formSlides { display: block !important; }
 .formSlides.hidden { display: none !important; }
+#form-slider button { cursor: pointer; }
 #form-slider #form_pageNav li { list-style: none; }
 
 #form-slider #form_pageNav { 
@@ -237,6 +240,7 @@ legend {
 	border: none;
 	color: #D8B5A4;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 #paginatePrev.disabledNav i,
@@ -245,20 +249,18 @@ legend {
 #form_pageNav #paginatePrev:not(.disabledNav):hover i { transform: translateX(-7px); }
 #form_pageNav #paginateNext:not(.disabledNav):hover i { transform: translateX(7px); }
 
-@media (min-width:576px) {
-    #form-slider { max-width: 540px }
+@media (max-width: 999px) {
+	.form-background { background-image: none !important; }
+	.form-background + div > .bg-overlay { margin: 0 !important; }
 }
 
-@media (min-width:768px) {
-    #form-slider { max-width: 720px }
-}
+@media (max-width: 450px) {
+	.formQuestion {
+		display: block;
+		margin: 10px 0 !important;
+	}
 
-@media (min-width:992px) {
-    #form-slider { max-width: 960px }
-}
-
-@media (min-width:1200px) {
-    #form-slider { max-width: 1140px }
+	.radio span { display: block; }
 }
 
 /*--------- File Inputs ---------*/
