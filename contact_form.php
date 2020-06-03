@@ -1,4 +1,4 @@
-<meta http-equiv="refresh" content="2.5;URL=franquicias.html"/>
+<meta http-equiv="refresh" content="2.5;URL=contacto.html"/>
 <?php
     date_default_timezone_set('America/Mexico_City');
 
