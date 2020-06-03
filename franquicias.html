@@ -501,13 +501,13 @@
 										<form method = "post" action = "">
 											<div class="formSlides" id="formSlide1">
 												<div class="flex-container">
-													<div class="six-columns">
+													<div class="twelve-columns">
 														<div class="margin-5-lr">
 															<input type="text" placeholder="Nombre" name = "franqName" id = "franqName" class="contact-form-control">
 														</div>
 													</div>
 					
-													<div class="six-columns">
+													<div class="twelve-columns">
 														<div class="margin-5-lr">
 															<input type="email" placeholder="Correo Electrónico" name = "franqEmail" id = "franqEmail" class="contact-form-control">
 														</div>
@@ -525,13 +525,13 @@
 														</div>
 													</div>
 					
-													<div class="seven-columns">
+													<div class="eight-columns">
 														<div class="margin-5-lr">
 															<input type="text" placeholder="Ocupación" name = "franqOcup" id = "franqOcup" class="contact-form-control">
 														</div>
 													</div>
 					
-													<div class="three-columns">
+													<div class="four-columns">
 														<div class="margin-5-lr">
 															<input type="text" placeholder="Edad" name = "franqAge" id = "franqAge" class="contact-form-control">
 														</div>
@@ -553,7 +553,7 @@
 														</label>
 													</div>
 			
-													<div class="ten-columns margin-10-lr">
+													<div class="twelve-columns margin-10-lr">
 														<input type="text" placeholder = "¿De qué tipo?" name = "franqPrevBusiness" id = "franqPrevBusiness" class="contact-form-control margin-20-tb">
 													</div>
 			
@@ -583,7 +583,7 @@
 														</label>
 													</div>
 			
-													<div class="ten-columns margin-10-lr">
+													<div class="twelve-columns margin-10-lr">
 														<input type="text" placeholder = "¿Quién lo operará?" name = "franqOperate" id = "franqOperate" class="contact-form-control margin-20-tb">
 													</div>
 												</div>
@@ -623,8 +623,8 @@
 														</label>
 													</div>
 			
-													<div class="ten-columns">
-														<input type="text" placeholder = "¿Tiene ubicación definida (ciudad o estado)?" name = "franqLocation" id = "franqLocation" class="contact-form-control margin-20-tb">
+													<div class="twelve-columns">
+														<input type="text" placeholder = "¿Tiene ubicación definida (ciudad o estado)?" name = "franqLocation" id = "franqLocation" class="contact-form-control margin-10-lr margin-20-tb">
 													</div>
 			
 													<div class="twelve-columns margin-20-tb">
@@ -639,8 +639,8 @@
 														</label>
 													</div>
 			
-													<div class="ten-columns">
-														<input type="text" placeholder = "¿Cuándo quisiera comenzar su negocio?" name = "franqStart" id = "franqStart" class="contact-form-control margin-20-tb">
+													<div class="twelve-columns">
+														<input type="text" placeholder = "¿Cuándo quisiera comenzar su negocio?" name = "franqStart" id = "franqStart" class="contact-form-control margin-10-lr margin-20-tb">
 													</div>
 
 													<div class="twelve-columns text-center top-padding-30">
@@ -751,11 +751,11 @@
 				let data = "";
 
 				for(let i = 0; i < fields; i++){
-					if(i != 6 && i != 8 && i != 9 && i != 11 && i != 12 && i != 14){
-						data = localStorage.getItem(fieldNames[i]);
-						if(data != null) $('#' + fieldNames[i]).val(data);
-					}	
-					else $('[name="' + fieldNames[i] + '"][value="' + data + '"]').prop('checked', true);				
+					data = localStorage.getItem(fieldNames[i]);
+					if(data != null) {
+						if(i != 6 && i != 8 && i != 9 && i != 11 && i != 12 && i != 14) $('#' + fieldNames[i]).val(data);
+						else $('[name="' + fieldNames[i] + '"][value="' + data + '"]').prop('checked', true);	
+					}			
 				}
 			});
 	  

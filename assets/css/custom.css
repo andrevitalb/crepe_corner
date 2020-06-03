@@ -49,6 +49,7 @@ header .midnightInner { overflow: hidden !important; }
 	display: inline-block;
 	transition: all .25s ease-in;
 	cursor: pointer;
+	min-width: 16.9px;
 }
 
 .radio span:hover { 
