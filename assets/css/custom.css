@@ -58,6 +58,9 @@ header .midnightInner { overflow: hidden !important; }
 
 input[type="radio"]:checked + span { background-color: #5B2509; }
 
+input[type="text"].invalidInput,
+input[type="email"].invalidInput { border-bottom: 1px solid rgba(255, 0, 0, .4) !important; }
+
 @media(max-width: 576px){
 	main { margin-bottom: 0 !important; }
 	footer { position: initial !important; }

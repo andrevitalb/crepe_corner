@@ -574,11 +574,11 @@
 													<div class="twelve-columns margin-20-tb">
 														<span class="margin-10 formQuestion">¿Conoce el sistema o manejo de alguna franquicia?</span>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqFranqSytem" value = "yes">
+															<input type="radio" name = "franqFranqSystem" value = "yes">
 															<span>Sí</span>
 														</label>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqFranqSytem" value = "no">
+															<input type="radio" name = "franqFranqSystem" value = "no">
 															<span>No</span>
 														</label>
 													</div>
@@ -735,6 +735,9 @@
 		<script>      
 			var counter = 1;
 			var pages;
+			let fieldNames = ['franqName','franqEmail','franqTel','franqNat','franqOcup','franqAge','franqOwnBusiness','franqPrevBusiness','franqGastExperience','franqFranqSystem','franqOperate','franqInvertAmount','franqInvertRecover','franqLocation','franqOwnPlace','franqStart'];
+
+			let fields = fieldNames.length;
 	  
 			$(document).ready(function(){
 				pages = $('.formSlides').length;
@@ -744,6 +747,16 @@
 				$('#formSlide1').removeClass('hidden');
 
 				$('.radio input').removeAttr('checked');
+
+				let data = "";
+
+				for(let i = 0; i < fields; i++){
+					if(i != 6 && i != 8 && i != 9 && i != 11 && i != 12 && i != 14){
+						data = localStorage.getItem(fieldNames[i]);
+						if(data != null) $('#' + fieldNames[i]).val(data);
+					}	
+					else $('[name="' + fieldNames[i] + '"][value="' + data + '"]').prop('checked', true);				
+				}
 			});
 	  
 			function checkExist(curr, num){
@@ -778,6 +791,118 @@
 		
 				$('#currentPageNum').html(counter);
 			}
+
+			function validateData(curr){
+				var validCounter = 0;
+				if(curr == 1){
+					if($('#franqName').val() == "") {
+						$('#franqName').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if($('#franqEmail').val() == "") {
+						$('#franqEmail').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if($('#franqTel').val() == "") {
+						$('#franqTel').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if($('#franqNat').val() == "") {
+						$('#franqNat').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if($('#franqOcup').val() == "") {
+						$('#franqOcup').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if($('#franqAge').val() == "") {
+						$('#franqAge').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if(validCounter > 0){
+						alert('Llena todos los campos antes de continuar.');
+						return false;
+					}
+
+					$('#formSlide1 input').removeClass('invalidInput');
+
+					localStorage.setItem('franqName', $('#franqName').val());
+					localStorage.setItem('franqEmail', $('#franqEmail').val());
+					localStorage.setItem('franqTel', $('#franqTel').val());
+					localStorage.setItem('franqNat', $('#franqNat').val());
+					localStorage.setItem('franqOcup', $('#franqOcup').val());
+					localStorage.setItem('franqAge', $('#franqAge').val());
+
+					return true;
+				}
+				else if(curr == 2){
+					if(!$('input[name="franqOwnBusiness"]').is(':checked')) validCounter++;
+
+					if($('#franqPrevBusiness').val() == "") {
+						$('#franqPrevBusiness').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if(!$('input[name="franqGastExperience"]').is(':checked')) validCounter++;
+					if(!$('input[name="franqFranqSystem"]').is(':checked')) validCounter++;
+
+					if($('#franqOperate').val() == "") {
+						$('#franqOperate').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if(validCounter > 0){
+						alert('Llena todos los campos antes de continuar.');
+						return false;
+					}
+
+					$('#formSlide2 input').removeClass('invalidInput');					
+					
+					localStorage.setItem('franqOwnBusiness', $('input[name="franqOwnBusiness"]:checked').val());
+					localStorage.setItem('franqPrevBusiness', $('#franqPrevBusiness').val());
+					localStorage.setItem('franqGastExperience', $('input[name="franqGastExperience"]:checked').val());localStorage.setItem('franqFranqSystem', $('input[name="franqFranqSystem"]:checked').val());
+					localStorage.setItem('franqOperate', $('#franqOperate').val());
+
+					return true;
+				}
+				else if(curr == 3){
+					if(!$('input[name="franqInvertAmount"]').is(':checked')) validCounter++;
+					if(!$('input[name="franqInvertRecover"]').is(':checked')) validCounter++;
+
+					if($('#franqLocation').val() == "") {
+						$('#franqLocation').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if(!$('input[name="franqOwnPlace"]').is(':checked')) validCounter++;
+
+					if($('#franqStart').val() == "") {
+						$('#franqStart').addClass('invalidInput');
+						validCounter++;
+					}
+
+					if(validCounter > 0){
+						alert('Llena todos los campos antes de continuar.');
+						return false;
+					}
+
+					$('#formSlide3 input').removeClass('invalidInput');					
+					
+					localStorage.setItem('franqInvertAmount', $('input[name="franqInvertAmount"]:checked').val());
+					localStorage.setItem('franqInvertRecover', $('input[name="franqInvertRecover"]:checked').val());
+					localStorage.setItem('franqLocation', $('#franqLocation').val());
+					localStorage.setItem('franqOwnPlace', $('input[name="franqOwnPlace"]:checked').val());
+					localStorage.setItem('franqStart', $('#franqStart').val());
+
+					return true;
+				}
+			}
 	  
 			$('#paginatePrev').click(function(){
 				var prevPage = counter - 1;
@@ -786,7 +911,7 @@
 			
 			$('#paginateNext').click(function(){
 				var nextPage = counter + 1;
-				checkExist(counter, nextPage);
+				if(validateData(counter)) checkExist(counter, nextPage);
 			});
 		</script>
 	</body>
