@@ -41,7 +41,7 @@ header .midnightInner { overflow: hidden !important; }
 	z-index: 1;
 	display: none;
 }
-.radio span {
+.radio > span {
 	background-color: #9F7763;
 	padding: 10px 17.5px;
 	border-radius: 10px;
@@ -52,7 +52,7 @@ header .midnightInner { overflow: hidden !important; }
 	min-width: 16.9px;
 }
 
-.radio span:hover { 
+.radio > span:hover { 
 	background-color: #5B2509;
 	transform: translateY(-7.5px);
 }
@@ -65,7 +65,7 @@ input[type="email"].invalidInput { border-bottom: 1px solid rgba(255, 0, 0, .4) 
 @media(max-width: 576px){
 	main { margin-bottom: 0 !important; }
 	footer { position: initial !important; }
-	.radio span:hover {  transform: translateY(0); }
+	.radio > span:hover { transform: translateY(0); }
 }
 
 /*-------------------------
@@ -217,16 +217,46 @@ legend {
 
 /*--------- Form Carousel ----------*/
 
-#form-slider, #form-slider * { 
+#form-slider, #form-slider *:not(.border-btn) { 
 	color: #ddd; 
 	letter-spacing: 0 !important;
 }
+
+.border-btn { letter-spacing: 0 !important; }
 
 .fSlidesWrapper { padding: 0 2.2rem; }
 .formSlides { display: block !important; }
 .formSlides.hidden { display: none !important; }
 #form-slider button { cursor: pointer; }
 #form-slider #form_pageNav li { list-style: none; }
+
+#formSlide3 .twelve-columns:nth-child(2) {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#formSlide3 .twelve-columns:nth-child(2) label {
+	box-sizing: border-box;
+	padding: 5px;
+}
+	
+#formSlide3 .twelve-columns:nth-child(2) label > span {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+
+.border-btn-box::after,
+.border-btn-inner::before,
+.border-btn-box::before,
+.border-btn-inner::after {
+	background-color: #E00047;
+}
+
+.border-btn::after { color: #E00047; }
 
 #form-slider #form_pageNav { 
 	padding: 0 3rem; 
@@ -247,11 +277,23 @@ legend {
 	cursor: pointer;
 }
 
+#paginatePrev.disabledNav,
 #paginatePrev.disabledNav i,
-#paginateNext.disabledNav i { color: rgba(221, 221, 221, .25); }
+#paginateNext.disabledNav,
+#paginateNext.disabledNav i { 
+	color: rgba(221, 221, 221, .25); 
+	cursor: default;
+}
 
 #form_pageNav #paginatePrev:not(.disabledNav):hover i { transform: translateX(-7px); }
 #form_pageNav #paginateNext:not(.disabledNav):hover i { transform: translateX(7px); }
+
+@media(min-width: 451px){
+	#formSlide3 .twelve-columns:nth-child(2) label {
+		flex-basis: 50%;
+		margin: 0 !important;
+	}
+}
 
 @media (max-width: 999px) {
 	.form-background { background-image: none !important; }

@@ -503,37 +503,37 @@
 												<div class="flex-container">
 													<div class="twelve-columns">
 														<div class="margin-5-lr">
-															<input type="text" placeholder="Nombre" name = "franqName" id = "franqName" class="contact-form-control">
+															<input type="text" placeholder="Nombre" name = "franqName" id = "franqName" class="contact-form-control" required>
 														</div>
 													</div>
 					
 													<div class="twelve-columns">
 														<div class="margin-5-lr">
-															<input type="email" placeholder="Correo Electrónico" name = "franqEmail" id = "franqEmail" class="contact-form-control">
+															<input type="email" placeholder="Correo Electrónico" name = "franqEmail" id = "franqEmail" class="contact-form-control" required>
 														</div>
 													</div>
 
 													<div class="six-columns">
 														<div class="margin-5-lr">
-															<input type="tel" placeholder="Teléfono" name = "franqTel" id = "franqTel" class="contact-form-control">
+															<input type="tel" placeholder="Teléfono" name = "franqTel" id = "franqTel" class="contact-form-control" required>
 														</div>
 													</div>
 					
 													<div class="six-columns">
 														<div class="margin-5-lr">
-															<input type="text" placeholder="Nacionalidad" name = "franqNat" id = "franqNat" class="contact-form-control">
+															<input type="text" placeholder="Nacionalidad" name = "franqNat" id = "franqNat" class="contact-form-control" required>
 														</div>
 													</div>
 					
 													<div class="eight-columns">
 														<div class="margin-5-lr">
-															<input type="text" placeholder="Ocupación" name = "franqOcup" id = "franqOcup" class="contact-form-control">
+															<input type="text" placeholder="Ocupación" name = "franqOcup" id = "franqOcup" class="contact-form-control" required>
 														</div>
 													</div>
 					
 													<div class="four-columns">
 														<div class="margin-5-lr">
-															<input type="text" placeholder="Edad" name = "franqAge" id = "franqAge" class="contact-form-control">
+															<input type="text" placeholder="Edad" name = "franqAge" id = "franqAge" class="contact-form-control" required>
 														</div>
 													</div>
 												</div>
@@ -544,29 +544,29 @@
 													<div class="twelve-columns margin-20-tb">
 														<span class="margin-10 formQuestion">¿Tiene o ha tenido negocio propio?</span>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqOwnBusiness" value = "yes">
+															<input type="radio" name = "franqOwnBusiness" value = "Sí" required>
 															<span>Sí</span>
 														</label>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqOwnBusiness" value = "no">
+															<input type="radio" name = "franqOwnBusiness" value = "No">
 															<span>No</span>
 														</label>
 													</div>
 			
 													<div class="twelve-columns margin-10-lr">
-														<input type="text" placeholder = "¿De qué tipo?" name = "franqPrevBusiness" id = "franqPrevBusiness" class="contact-form-control margin-20-tb">
+														<input type="text" placeholder = "¿De qué tipo?" name = "franqPrevBusiness" id = "franqPrevBusiness" class="contact-form-control margin-20-tb" required>
 													</div>
 			
 													<div class="twelve-columns margin-20-tb">
 														<span class="margin-10 formQuestion">¿Tiene experiencia en la rama de la gastronomía?</span>
 														<label class="margin-5-lr radio">
 															<input type="radio" name = "franqGastExperience" value = 
-															"yes">
+															"Sí" required>
 															<span>Sí</span>
 														</label>
 														<label class="margin-5-lr radio">
 															<input type="radio" name = "franqGastExperience" value = 
-															"no">
+															"No">
 															<span>No</span>
 														</label>
 													</div>
@@ -574,17 +574,17 @@
 													<div class="twelve-columns margin-20-tb">
 														<span class="margin-10 formQuestion">¿Conoce el sistema o manejo de alguna franquicia?</span>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqFranqSystem" value = "yes">
+															<input type="radio" name = "franqFranqSystem" value = "Sí" required>
 															<span>Sí</span>
 														</label>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqFranqSystem" value = "no">
+															<input type="radio" name = "franqFranqSystem" value = "No">
 															<span>No</span>
 														</label>
 													</div>
 			
 													<div class="twelve-columns margin-10-lr">
-														<input type="text" placeholder = "¿Quién lo operará?" name = "franqOperate" id = "franqOperate" class="contact-form-control margin-20-tb">
+														<input type="text" placeholder = "¿Quién lo operará?" name = "franqOperate" id = "franqOperate" class="contact-form-control margin-20-tb" required>
 													</div>
 												</div>
 											</div>
@@ -596,25 +596,34 @@
 													</div>
 			
 													<div class="twelve-columns margin-10-tb">
-														<label class="margin-5-lr radio">
+														<label class="m-0 radio">
 															<input type="radio" name = "franqInvertAmount" value = 
-															"40-60">
-															<span>US $40'000 - $60'000</span>
+															"US $40'000 - $60'000" required>
+															<span>
+																<span>US $40'000 - $60'000</span>
+															</span>
 														</label>
-														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqInvertAmount" value = "60-100">
-															<span>US $60'000 - $100'000</span>
+														<label class="m-0 radio">
+															<input type="radio" name = "franqInvertAmount" value = "US $60'000 - $100'000">
+															<span>
+																<span>US $60'000 - $100'000</span>
+															</span>
 														</label>
-														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqInvertAmount" value = "100-150">
-															<span>US $100'000 - $150'000</span>
+														<label class="m-0 radio">
+															<input type="radio" name = "franqInvertAmount" value = "US $100'000 - $150'000">
+															<span>
+																<span>US $100'000 - $150'000</span>
+															</span>
 														</label>
 													</div>
 			
-													<div class="twelve-columns margin-20-tb">
-														<span class="margin-10 formQuestion">¿En cuánto tiempo espera recuperar su inversión?</span>
+													<div class="twelve-columns margin-10">
+														<p class = "formQuestion">¿En cuánto tiempo espera recuperar su inversión?</p>
+													</div>
+													
+													<div class="twelve-columns margin-10-tb">
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqInvertRecover" value = "12">
+															<input type="radio" name = "franqInvertRecover" value = "12" required>
 															<span>12 meses</span>
 														</label>
 														<label class="margin-5-lr radio">
@@ -624,27 +633,27 @@
 													</div>
 			
 													<div class="twelve-columns">
-														<input type="text" placeholder = "¿Tiene ubicación definida (ciudad o estado)?" name = "franqLocation" id = "franqLocation" class="contact-form-control margin-10-lr margin-20-tb">
+														<input type="text" placeholder = "¿Tiene ubicación definida (ciudad o estado)?" name = "franqLocation" id = "franqLocation" class="contact-form-control margin-10-lr margin-20-tb" required>
 													</div>
 			
 													<div class="twelve-columns margin-20-tb">
 														<span class="margin-10 formQuestion">¿Cuenta con local propio?</span>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqOwnPlace" value = "yes">
+															<input type="radio" name = "franqOwnPlace" value = "Sí" required>
 															<span>Sí</span>
 														</label>
 														<label class="margin-5-lr radio">
-															<input type="radio" name = "franqOwnPlace" value = "no">
+															<input type="radio" name = "franqOwnPlace" value = "No">
 															<span>No</span>
 														</label>
 													</div>
 			
 													<div class="twelve-columns">
-														<input type="text" placeholder = "¿Cuándo quisiera comenzar su negocio?" name = "franqStart" id = "franqStart" class="contact-form-control margin-10-lr margin-20-tb">
+														<input type="text" placeholder = "¿Cuándo quisiera comenzar su negocio?" name = "franqStart" id = "franqStart" class="contact-form-control margin-10-lr margin-20-tb" required>
 													</div>
 
 													<div class="twelve-columns text-center top-padding-30">
-														<button class="border-btn-box pointer-large" type = "submit">
+														<button class="border-btn-box pointer-large" type = "submit" onclick="validateData(counter)">
 															<span class="border-btn-inner">
 																  <span class="border-btn" data-text="Enviar">Enviar</span>
 															</span>
@@ -911,7 +920,7 @@
 			
 			$('#paginateNext').click(function(){
 				var nextPage = counter + 1;
-				if(validateData(counter)) checkExist(counter, nextPage);
+				if(counter < 3) if(validateData(counter)) checkExist(counter, nextPage);
 			});
 		</script>
 	</body>

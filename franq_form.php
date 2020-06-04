@@ -1,6 +1,7 @@
+
 <meta http-equiv="refresh" content="2.5;URL=franquicias.html"/>
 <?php
-    date_default_timezone_set('America/Mexico_City');
+	date_default_timezone_set('America/Mexico_City');
 
     $name = $_REQUEST['franqName'];
     $email = $_REQUEST['franqEmail'];
@@ -9,39 +10,16 @@
     $ocup = $_REQUEST['franqOcup'];
     $age = $_REQUEST['franqAge'];
 
-
     $ownBusiness = $_REQUEST['franqOwnBusiness'];
-    if($ownBusiness == "yes") $ownBusiness = "Sí";
-    else $ownBusiness = "No";
-
     $prevBusiness = $_REQUEST['franqPrevBusiness'];
-
     $gastExperience = $_REQUEST['franqGastExperience'];
-    if($gastExperience == "yes") $gastExperience = "Sí";
-    else $gastExperience = "No";
-
     $franqSystem = $_REQUEST['franqFranqSystem'];
-    if($franqSystem == "yes") $franqSystem = "Sí";
-    else $franqSystem = "No";
-
     $operate = $_REQUEST['franqOperate'];
-
     
-    $invertAmount = $_REQUEST['franqInvertAmount'];
-    if($invertAmount == "40-60") $invertAmount = "US $40'000 - $60'000";
-    else if($invertAmount == "60-100") $invertAmount = "US $60'000 - $100'000";
-    else $invertAmount = "US $100'000 - $150'000";
-
-    $invertRecover = $_REQUEST['franqInvertRecover'];
-    if($invertRecover == "12") $invertRecover = "12 meses";
-    else $invertRecover = "18 meses";
-
-    $location = $_REQUEST['franqLocation'];
-
-    $ownPlace = $_REQUEST['franqOwnPlace'];
-    if($ownPlace == "yes") $ownPlace = "Sí";
-    else $ownPlace = "No";
-
+	$invertAmount = $_REQUEST['franqInvertAmount'];
+	$invertRecover = $_REQUEST['franqInvertRecover'];
+	$location = $_REQUEST['franqLocation'];
+	$ownPlace = $_REQUEST['franqOwnPlace'];
     $start = $_REQUEST['franqStart'];
 
     $headers = "MIME-Version: 1.0" . "\r\n";
