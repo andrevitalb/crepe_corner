@@ -760,8 +760,10 @@
 				let data = "";
 
 				for(let i = 0; i < fields; i++){
+					$('#' + fieldNames[i]).val();
+					
 					data = localStorage.getItem(fieldNames[i]);
-					if(data != null) {
+					if(data != null && data != 'undefined' && data != undefined) {
 						if(i != 6 && i != 8 && i != 9 && i != 11 && i != 12 && i != 14) $('#' + fieldNames[i]).val(data);
 						else $('[name="' + fieldNames[i] + '"][value="' + data + '"]').prop('checked', true);	
 					}			
