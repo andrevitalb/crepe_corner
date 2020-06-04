@@ -126,29 +126,29 @@
 									<div class="container small top-bottom-padding-30">
 										<h4 class="medium-title text-color-4 text-center">¡Sé parte de nuestra familia!</h4>
 										<p class="medium-title-title text-color-4 text-center padding-40-top">Para oportunidades de empleo favor de proporcionarnos los siguientes datos o envíenos su CV al siguiente correo electrónico: <a href="mailto:rh@crepecorners.com">rh@crepecorners.com</a></p>
-										<form method = "post" action = "">
+										<form method = "post" action = "empleo_form.php" enctype="multipart/form-data">
 											<div class="flex-container justify-content-center top-padding-50">
 												<div class="ten-columns">
 													<div class="margin-5-lr">
-														   <input type="text" placeholder="Nombre" name = "jobName" id = "jobName" class="contact-form-control">
-													   </div>
-												</div>
-				
-												<div class="ten-columns">
-													<div class="margin-5-lr">
-														   <input type="text" placeholder="Puesto a solicitar (opcional)" name = "jobPosition" id = "jobPosition" class="contact-form-control">
+														<input type="text" placeholder="Nombre" name = "jobName" id = "jobName" class="contact-form-control">
 													</div>
 												</div>
 				
 												<div class="ten-columns">
 													<div class="margin-5-lr">
-														   <input type="email" placeholder="Correo Electrónico" name = "jobEmail" id = "jobEmail" class="contact-form-control">
+														<input type="text" placeholder="Puesto a solicitar (opcional)" name = "jobPosition" id = "jobPosition" class="contact-form-control">
 													</div>
 												</div>
 				
 												<div class="ten-columns">
 													<div class="margin-5-lr">
-														   <input type="tel" placeholder="Teléfono" name = "jobTel" id = "jobTel" class="contact-form-control">
+														<input type="email" placeholder="Correo Electrónico" name = "jobEmail" id = "jobEmail" class="contact-form-control">
+													</div>
+												</div>
+				
+												<div class="ten-columns">
+													<div class="margin-5-lr">
+														<input type="tel" placeholder="Teléfono" name = "jobTel" id = "jobTel" class="contact-form-control">
 													</div>
 												</div>
 											</div>
@@ -156,13 +156,13 @@
 											<div class="flex-container justify-content-center">
 												<div class="four-columns text-center">
 													<div class="margin-5-lr">
-														<label class = "margin-1em-tb" for="file-2">Adjúntanos tu CV</label>
+														<label class = "margin-1em-tb" for="jobCV">Adjúntanos tu CV</label>
 													</div>
 												</div>
 				
 												<div class="six-columns">
-													<input type="file" name="file-2" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} archivos seleccionados" multiple />
-													<label for="file-2">
+													<input type="file" name="jobCV" id="jobCV" class="inputfile inputfile-2">
+													<label for="jobCV">
 														<svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
 														<span class="iborrainputfile">Seleccionar archivo</span>
 													</label>
