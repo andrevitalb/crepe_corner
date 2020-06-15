@@ -12,7 +12,6 @@ a { transition: .2s all ease-in-out; }
 
 .justify-content-center { justify-content: center; }
 .justify-content-between { justify-content: space-between; }
-header .midnightInner { overflow: hidden !important; }
 .bg-center-bottom { background-position: center 95%; }
 
 .yellow { transition: all .15s ease-in-out; }
@@ -67,6 +66,12 @@ input[type="email"].invalidInput { border-bottom: 1px solid rgba(255, 0, 0, .4) 
 	footer { position: initial !important; }
 	.radio > span:hover { transform: translateY(0); }
 }
+
+/*-------------------------
+		  Index
+-------------------------*/
+
+.home-slider .flex-container.response-999 { margin-top: -50px; }
 
 /*-------------------------
 		  Menú
@@ -168,16 +173,10 @@ input[type="email"].invalidInput { border-bottom: 1px solid rgba(255, 0, 0, .4) 
 
 /*--------- CTA ---------*/
 
-#franqCTA,
-#franqCTA .title-fill:after { background-color: #D8B5A4; }
-
 #franqCTA { border-radius:5px; }
 #franqCTA .title-fill:after { color: #fff; }
 
 #franqCTA h3 {
-	font-size: 22px;
-	line-height: 26px;
-	font-weight: 700;
 	color: #fff;
 	margin-bottom:20px;
 }
@@ -186,6 +185,8 @@ input[type="email"].invalidInput { border-bottom: 1px solid rgba(255, 0, 0, .4) 
 	font-size: 18px;
 	line-height: 22px;
 }
+
+#ambientacion_franq .list-dots p { margin: 0 !important; }
 
 /*--------- Form ---------*/
 
@@ -253,10 +254,10 @@ legend {
 .border-btn-inner::before,
 .border-btn-box::before,
 .border-btn-inner::after {
-	background-color: #E00047;
+	background-color: #D8B5A4;
 }
 
-.border-btn::after { color: #E00047; }
+.border-btn::after { color: #D8B5A4; }
 
 #form-slider #form_pageNav { 
 	padding: 0 3rem; 
