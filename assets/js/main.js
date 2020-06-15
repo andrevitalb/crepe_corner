@@ -3,12 +3,10 @@
   2. Animsition preloader
   3. Swiper slider
   4. Isotope filter
-  5. Midnight
   6. Navigation open/close
   7. Drop-down menu
   8. Change menu background
   9. ScrollAnimations
-  10. Headroom
   11. Magnific popup
   12. Scroll to id
   13. Touch, no touch
@@ -277,9 +275,6 @@ $(function() {
 			projectFilter();
 	
 		});
-		    
-	    /* 5. Midnight */
-	    $('.fixed-header').midnight();
 		
 		/* 6. Navigation open/close */
 		$( ".menu-open" ).on( "click", function() {
@@ -313,9 +308,6 @@ $(function() {
 	/* 9. ScrollAnimations */
 	var $containers = $('[data-animation]:not([data-animation-child]), [data-animation-container]');
 	$containers.scrollAnimations();
-	
-	/* 10. Headroom */
-	$(".fixed-header").headroom();
 	
 	/* 11. Magnific popup */
 	$('.photo-popup').magnificPopup({
